@@ -1,0 +1,19 @@
+name: Deploy to cloudtype
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '**'
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - run: npm i -g @cloudtype/cli
+      - run: ctype login -t ${{ secrets.CLOUDTYPE_TOKEN }}
+      - run: ctype apply

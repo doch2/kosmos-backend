@@ -1,0 +1,8 @@
+name: kosmos-backend
+app: dockerfile
+options:
+  ports: 80
+  dockerfile: Dockerfile
+  git:
+    branch: main
+    url: https://github.com/doch2/kosmos-backend.git
