@@ -1,7 +1,7 @@
 name: kosmos-backend
 app: dockerfile
 options:
-  ports: 80
+  ports: 8080
   dockerfile: Dockerfile
   git:
     branch: main
