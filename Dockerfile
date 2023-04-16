@@ -7,6 +7,7 @@ COPY . /app
 WORKDIR /app
 
 RUN chown -R 1000:1000 /app
+RUN chmod -R 777 /app
 
 RUN pip3 install -r requirements.txt
 
