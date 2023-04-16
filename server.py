@@ -15,7 +15,7 @@ def main():
     requestData = request.json
 
     location = ((requestData['location'])[0], (requestData['location'])[1])
-    graph = ox.graph_from_point(location, dist=500, network_type='all')
+    graph = ox.graph_from_point(location, dist=(requestData['distance']), network_type='all')
 
     node_dict = {node: (data['x'], data['y']) for node, data in graph.nodes(data=True)}
     resultData = list(node_dict.values())
