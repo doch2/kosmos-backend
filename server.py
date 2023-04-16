@@ -10,7 +10,7 @@ CORS(app)
 def hello():
 	return "본 API는 GET 형식 요청을 받지 않습니다."
 
-@app.route('/roadPath', methods=['GET'])
+@app.route('/roadPath', methods=['POST'])
 def main():
     requestData = request.json
 
